@@ -11,6 +11,7 @@ function HammerSmash:init()
 
   MeleeSlash.init(self)
   self:setupInterpolation()
+  local bounds = mcontroller.boundBox()
 end
 
 function HammerSmash:windup(windupProgress)
@@ -68,6 +69,24 @@ function HammerSmash:fire()
   smashMomentum[1] = smashMomentum[1] * mcontroller.facingDirection()
   mcontroller.addMomentum(smashMomentum)
 
+-- ******************* FR ADDONS FOR HAMMER SWINGS
+
+
+  if status.isResource("food") then
+    self.foodValue = status.resource("food")  --check our Food level
+  else
+    self.foodValue = 60
+  end
+
+
+  local species = world.entitySpecies(activeItem.ownerEntityId())
+  if species == "floran" then  --florans use food when attacking
+    if status.isResource("food") then
+      status.modifyResource("food", (status.resource("food") * -0.01) )
+    end
+  end
+-- ***********************************************
+
   local smashTimer = self.stances.fire.smashTimer
   local duration = self.stances.fire.duration
   while smashTimer > 0 or duration > 0 do
@@ -123,5 +142,11 @@ function HammerSmash:windupAngle(ratio)
   local armRotation = interp.ranges(ratio, self.stances.windup.armAngle)
 
   return util.toRadians(weaponRotation), util.toRadians(armRotation)
+end
+
+function HammerSmash:uninit()
+  status.clearPersistentEffects("floranFoodPowerBonus")
+  status.clearPersistentEffects("apexbonusdmg")
+  self.blockCount = 0
 end
 
