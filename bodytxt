@@ -2,10 +2,11 @@
 #ingame
 #######
 
-^#5aa9d6;Auto fires your hammer or axe as soon as its charged.^reset;
+^#5aa9d6;Allows hammers and axes to auto-fire while still benefitting from racial buffs.^reset;
 
-Now applies to any pertinent right-click abilities!
-Check out Argle Bargles Easier Hammers and Axes or my own Windup Armory Tweaks (Glow) for other swing options.
+This mod is required in order to restore full functionality of both mods. Requires Frackin' Races and Windup Weapons Auto-fire to work.
+
+Check out Argle Bargles Easier Hammers and Axes or my own Windup Weapons Auto-fire for other windup options.
 
 For more, click the MEGATHREAD link from the steam page.
 
@@ -13,12 +14,14 @@ For more, click the MEGATHREAD link from the steam page.
 #steam
 ######
 
-[h1]Auto fires your hammer or axe as soon as its charged.[/h1]
-Now applies to any pertinent right-click abilities!
-Check out Argle Bargles [url=http://steamcommunity.com/sharedfiles/filedetails/?id=787655233]Easier Hammers and Axes[/url] or my own [url=http://steamcommunity.com/sharedfiles/filedetails/?id=782911333]Windup Armory Tweaks (Glow)[/url] for other swing options.
+[h1]Allows hammers and axes to auto-fire while still benefitting from racial buffs.[/h1]
+
+This mod is required in order to restore full functionality of both mods. Requires [url=http://steamcommunity.com/sharedfiles/filedetails/?id=763259329]Frackin' Races[/url] and [url=http://steamcommunity.com/sharedfiles/filedetails/?id=782921923]Windup Weapons Auto-fire[/url] to work.
+
+Check out Argle Bargles [url=http://steamcommunity.com/sharedfiles/filedetails/?id=787655233]Easier Hammers and Axes[/url] or my own [url=http://steamcommunity.com/sharedfiles/filedetails/?id=782911333]Windup Weapons Glow[/url] for other windup options.
 
 [url=community.playstarbound.com/threads/124193/]MEGATHREAD[/url]
-Alternate downloads can be found on my [url=https://github.com/IsaacHart/sbmod-windarmauto/releases/tag/0.3]github.[/url]
+Alternate downloads can be found on my [url=https://github.com/IsaacHart/sbcom-windarmauto-fracrace/releases/tag/0.1]github.[/url]
 
 steam://url/CommunityFilePage/
 
@@ -26,9 +29,11 @@ steam://url/CommunityFilePage/
 #forum
 ######
 
-Auto fires your hammer or axe as soon as its charged.
-Now applies to any pertinent right-click abilities!
-Check out Argle Bargles [url=http://steamcommunity.com/sharedfiles/filedetails/?id=787655233]Easier Hammers and Axes[/url] or my own [url=http://steamcommunity.com/sharedfiles/filedetails/?id=782911333]Windup Armory Tweaks (Glow)[/url] for other swing options.
+Allows hammers and axes to auto-fire while still benefitting from racial buffs.
+
+This mod is required in order to restore full functionality of both mods. Requires [url=community.playstarbound.com/resources/3717/]Frackin' Races[/url] and [url=community.playstarbound.com/resources/4283/]Windup Weapons Auto-fire[/url] to work.
+
+Check out Argle Bargles [url=http://steamcommunity.com/sharedfiles/filedetails/?id=787655233]Easier Hammers and Axes[/url] or my own [url=community.playstarbound.com/resources/4282/]Windup Weapons Glow[/url] for other swing options.
 
 [URL='http://community.playstarbound.com/threads/124193/']MEGATHREAD[/URL]
 
@@ -40,5 +45,5 @@ PERMISSIONS: granted per license, gplv3, included in download.
 #megathread
 ###########
 
-Windup Auto (0.3) [URL='http://steamcommunity.com/sharedfiles/filedetails/?id=782921923']steam[/URL] | [URL='http://community.playstarbound.com/resources/4283/']forum[/URL] | [URL='https://github.com/IsaacHart/sbmod-windarmauto/releases']github[/URL] | [URL='https://github.com/IsaacHart/sbmod-windarmauto/releases/download/0.3/sbmod-windarmauto-0.3.pak']direct[/URL]
+Windup Auto - Frackin Races compatibility patch (0.1) [URL='http://steamcommunity.com/sharedfiles/filedetails/?id=']steam[/URL] | [URL='http://community.playstarbound.com/resources//']forum[/URL] | [URL='https://github.com/IsaacHart/sbcom-windarmauto-fracrace/releases']github[/URL] | [URL='https://github.com/IsaacHart/sbcom-windarmauto-fracrace/releases/download/0.1/sbcom-windarmauto-fracrace-0.1.pak']direct[/URL]
 

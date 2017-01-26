@@ -1,13 +1,15 @@
 {
   "author" : "isaac as THE HONEY BADGER",
-  "description" : "^#5aa9d6;Auto fires your hammer or axe as soon as its charged.^reset;
+  "description" : "^#5aa9d6;Allows hammers and axes to auto-fire while still benefitting from racial buffs.^reset;
 
-Check out Argle Bargles Easier Hammers and Axes or my own Windup Armory Tweaks (Glow) for other swing options.
+This mod is required in order to restore full functionality of both mods. Requires Frackin' Races and Windup Weapons Auto-fire to work.
+
+Check out Argle Bargles Easier Hammers and Axes or my own Windup Weapons Auto-fire for other windup options.
 
 For more, click the MEGATHREAD link from the steam page.",
-  "friendlyName" : "Windup Armory Tweaks (Auto)",
+  "friendlyName" : "Windup Weapons Auto-fire! - Frackin Races compatibility patch",
   "includes":["WINDARM.IHC","WINDARMAUTO.IHC","FrackinRaces"],
   "name" : "WINDARMAUTO-FRACRACE.IHC",
-  "requires":[],
+  "requires":["WINDARMAUTO.IHC","FrackinRaces"],
   "version" : "0.1"
 }
