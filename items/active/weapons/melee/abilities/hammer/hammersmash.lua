@@ -70,19 +70,48 @@ function HammerSmash:fire()
   mcontroller.addMomentum(smashMomentum)
 
 -- ******************* FR ADDONS FOR HAMMER SWINGS
-
-
   if status.isResource("food") then
-    self.foodValue = status.resource("food")  --check our Food level
+    self.foodValue = status.resource("food")
+    hungerLevel = status.resource("food")
   else
-    self.foodValue = 60
+    self.foodValue = 50
+    hungerLevel = 50
+  end
+    --food defaults
+  hungerMax = { pcall(status.resourceMax, "food") }
+  hungerMax = hungerMax[1] and hungerMax[2]
+  if status.isResource("energy") then
+    self.energyValue = status.resource("energy")  --check our Food level
+  else
+    self.energyValue = 80
   end
 
-
   local species = world.entitySpecies(activeItem.ownerEntityId())
+  -- Primary hand, or single-hand equip  
+  local heldItem = world.entityHandItem(activeItem.ownerEntityId(), activeItem.hand())
+  --used for checking dual-wield setups
+  local opposedhandHeldItem = world.entityHandItem(activeItem.ownerEntityId(), activeItem.hand() == "primary" and "alt" or "primary")
+  local randValue = math.random(100)  -- chance for projectile       
+  if not self.meleeCount then self.meleeCount = 0 end
+     
   if species == "floran" then  --florans use food when attacking
     if status.isResource("food") then
       status.modifyResource("food", (status.resource("food") * -0.01) )
+    end
+  end
+
+  if species == "glitch" then  --glitch consume energy when wielding axes and hammers. They get increased critChance as a result
+    if not self.critValueGlitch then
+      self.critValueGlitch = ( math.ceil(self.energyValue/8) ) 
+    end  
+    if self.energyValue >= 25 then
+      if status.isResource("food") then
+        adjustedHunger = hungerLevel - (hungerLevel * 0.01)
+        status.setResource("food", adjustedHunger)      
+      end        
+      status.setPersistentEffects("glitchEnergyPower", {
+        { stat = "critChance", amount = self.critValueGlitch }
+      })     
     end
   end
 -- ***********************************************
@@ -145,6 +174,7 @@ function HammerSmash:windupAngle(ratio)
 end
 
 function HammerSmash:uninit()
+  status.clearPersistentEffects("glitchEnergyPower")
   status.clearPersistentEffects("floranFoodPowerBonus")
   status.clearPersistentEffects("apexbonusdmg")
   self.blockCount = 0
