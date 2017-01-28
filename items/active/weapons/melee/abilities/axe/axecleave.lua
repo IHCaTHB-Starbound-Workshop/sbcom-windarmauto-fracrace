@@ -142,7 +142,7 @@ function AxeCleave:windupAngle(ratio)
   return util.toRadians(weaponRotation), util.toRadians(armRotation)
 end
 
-function HammerSmash:uninit()
+function AxeCleave:uninit()
   status.clearPersistentEffects("glitchEnergyPower")
   status.clearPersistentEffects("floranFoodPowerBonus")
   status.clearPersistentEffects("apexbonusdmg")
